@@ -7,5 +7,7 @@ Shellcode_generic.asm est un shellcode en x86_64, il a été codé pour faire un
 
 Shellcode_generic_2.asm est une amélioration du 1, il fonctionne dans plus de cas que le premier shellcode, mais il est d'une plus grande taille.  
 
+Shellcode_x32_generic.asm est shellcode_generic_2 en version x32
+
 
 # shellcode
